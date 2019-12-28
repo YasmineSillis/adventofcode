@@ -1,23 +1,39 @@
-
 {
 	"version": "0.2.0",
 	"configurations": [
-
+		{
+			"name": "Python: Current File",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal"
+		},
 		{
 			"type": "node",
 			"request": "launch",
 			"name": "Launch Program",
-			"args": ["${file}"],
-			"runtimeArgs": [ "-r", "ts-node/register"],
+			"args": [
+				"${file}"
+			],
+			"runtimeArgs": [
+				"-r",
+				"ts-node/register"
+			],
 			"cwd": "${workspaceRoot}/typescript",
-			"sourceMaps": false,			
+			"sourceMaps": false,
 		},
 		{
 			"name": "Node Inspector",
 			"type": "node",
 			"request": "launch",
-			"args": ["${file}"],
-			"runtimeArgs": ["--nolazy","-r", "ts-node/register"],
+			"args": [
+				"${file}"
+			],
+			"runtimeArgs": [
+				"--nolazy",
+				"-r",
+				"ts-node/register"
+			],
 			"cwd": "${workspaceRoot}/typescript",
 			"protocol": "inspector",
 			"internalConsoleOptions": "openOnSessionStart",

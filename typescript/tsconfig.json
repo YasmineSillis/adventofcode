@@ -5,6 +5,7 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noEmitOnError": false,
+    "strictNullChecks": false,
     "noImplicitThis": true,
     "sourceMap": true,
     "noEmit": true,
