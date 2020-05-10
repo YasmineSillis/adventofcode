@@ -12,6 +12,7 @@ while index<len(newInput):
     posities.append(positie)
     positie.append(actie[0])
     index=index+1
+print(posities)
 index=0
 while index<len(posities):
     instruction=posities[index]
