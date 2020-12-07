@@ -1005,7 +1005,10 @@ nice=list()
 for line in newInput:
     woorden=re.findall(r"(\w+)",line)
     print(woorden)
-    aantal=len(re.findall(woorden[2], woorden[3]))
-    if aantal>=int(woorden[0]) and aantal<=int(woorden[1]):
+    positiea=woorden[3][int(woorden[0])-1]
+    positieb=woorden[3][int(woorden[1])-1]
+    aenb=positiea+positieb
+    aantal=len(re.findall(woorden[2], aenb))
+    if aantal==1:
         nice.append(woorden[3])
 print(len(nice))   
