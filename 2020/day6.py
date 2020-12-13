@@ -978,6 +978,28 @@ def part1():
     plaatsen=list()
     for line in matrix:
         plaatsen.append(line[0]*8+line[1])
+    #print(plaatsen)
+    #print(max(plaatsen))
+def part2():
+    for line in newInput:
+        d1=line[:7]
+        d2=line[7:]
+        d1=d1.replace('F','0')
+        d1=d1.replace('B','1')
+        d2=d2.replace('L','0')
+        d2=d2.replace('R','1')
+        matrix.append([int(d1, 2), int(d2,2)])
+    #print(matrix)
+    plaatsen=list()
+    for line in matrix:
+        plaatsen.append(line[0]*8+line[1])
+    #print(plaatsen)
+    #print(max(plaatsen))
+    plaatsen.sort()
     print(plaatsen)
-    print(max(plaatsen))
-part1()
+    i=0
+    for element in plaatsen:
+        if plaatsen[i+1]==element+2:
+            return element+1
+        i+=1
+print(part2())
